@@ -1,0 +1,179 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Nunito Sans", "Arial", sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* nunito-sans-300 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+    url('../fonts/nunito-sans-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+    url('../fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-600 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: 
+    url('../fonts/nunito-sans-v12-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-800 - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: 
+    url('../fonts/nunito-sans-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-btn{
+    display: flex;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    color: #111517;
+    border-style: none;
+    background-color: transparent;
+}
+
+.header-btn::before{
+    
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    content: "";
+    background-image: url(../images/path.svg);
+    background-repeat: no-repeat;
+}
+
+.dark{
+    background-color: #202C36;
+    color: #fff;
+}
+
+.hero{
+    padding-top: 48px;
+    background-color: #F2F2F2;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+input{
+    padding: 18px 59px;
+    width: 480px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 8px;
+    content: "";
+    background-image: url(../images/search.png);
+    background-position:calc(50% - 206px) calc(50% + 0px);
+    background-repeat: no-repeat;
+    color: #000;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 5px;
+}
+
+input:focus{
+    box-shadow: 0px 2px  9px rgba(0, 0, 0, 0.0532439);
+    
+}
+
+
+select{
+    width: 200px;
+    font-family: "Nunito Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111517;
+    padding: 18px 24px;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+}
+
+.country-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.country-item{
+    width: 264px;
+    margin-bottom: 67px;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+}
+
+.country-item:nth-child(4){
+    margin-right: 0;
+}
+
+.item-txt{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #111517;
+    padding: 24px 24px;
+}
+
+h3{
+    margin: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: #111517;
+}
+
