@@ -1,16 +1,42 @@
+:root{
+    --header-bgcolor:#fff;
+    --body-bgcolor:#f2f2f2;
+    --main-font-family: "Nunito Sans", "Arial", sans-serif;
+    --text-color:#111517;
+    --card-border-radius:5px;
+    --form-color:#fff;
+}
+
 html{
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
-    font-family: "Nunito Sans", "Arial", sans-serif;
+    padding: 0;
+    font-family:var(--main-font-family);
+    background-color: var(--body-bgcolor);
+    color: var(--text-color);
+    transition: background-color 0.5s ease , color 0.5s ease;
 }
 
 .container{
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* nunito-sans-300 - latin */
@@ -50,14 +76,35 @@ body{
     url('../fonts/nunito-sans-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+.theme-dark{
+    --header-bgcolor:#2B3844;
+    --text-color:#fff;
+    --body-bgcolor:#202C36;
+    --form-color:#2B3844;
+    
+}
+
+img{
+    display: inline-block;
+}
+
+.header{
+    background-color: var(--header-bgcolor);
+    color: var(--text-color);
+    transition: background-color 0.5s ease , color 0.5s ease;
+    box-shadow: 0px 2px 4px #0000000e;
+}
+
 .header-inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 29px;
-    padding-bottom: 29px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    padding: 23px 0;
     
+}
+
+.site-logo{
+    color: var(--text-color);
 }
 
 a{
@@ -65,34 +112,29 @@ a{
 }
 
 .header-btn{
-    display: flex;
+    padding: 0;
+    padding-left: 28px;
+    font-family:  var(--main-font-family);
+    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    cursor: pointer;
-    color: #111517;
-    border-style: none;
+    color: var(--text-color);
     background-color: transparent;
-}
-
-.header-btn::before{
-    
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    content: "";
-    background-image: url(../images/path.svg);
+    background-image: url("../images/path.svg");
+    background-position: left center;
     background-repeat: no-repeat;
+    border: none;
+    
 }
 
-.dark{
-    background-color: #202C36;
-    color: #fff;
+.theme-dark .header-btn{
+    background-image: url("../images/path-dark.svg");
 }
+
 
 .hero{
     padding-top: 48px;
-    background-color: #F2F2F2;
 }
 
 form{
@@ -101,6 +143,8 @@ form{
     align-items: center;
     margin-bottom: 48px;
 }
+
+
 
 input{
     padding: 18px 59px;
@@ -113,18 +157,19 @@ input{
     background-image: url(../images/search.png);
     background-position:calc(50% - 206px) calc(50% + 0px);
     background-repeat: no-repeat;
-    color: #000;
+    color: var(--text-color);
     outline: none;
-    background-color: #fff;
+    background-color: var(--form-color);
     border: 1px solid rgba(0,0,0,1);
     border-radius: 5px;
 }
+
+/* img va formlaga psevdo klassla ishlatilmaydi */
 
 input:focus{
     box-shadow: 0px 2px  9px rgba(0, 0, 0, 0.0532439);
     
 }
-
 
 select{
     width: 200px;
@@ -132,7 +177,8 @@ select{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: #111517;
+    color: var(--text-color);
+    background-color: var(--form-color);
     padding: 18px 24px;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
     border-radius: 5px;
@@ -151,7 +197,8 @@ select{
 .country-item{
     width: 264px;
     margin-bottom: 67px;
-    background-color: #fff;
+    
+    background-color: var(--form-color);
     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
     border-radius: 5px;
 }
@@ -164,7 +211,7 @@ select{
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
-    color: #111517;
+    color: var(--text-color);
     padding: 24px 24px;
 }
 
@@ -174,6 +221,7 @@ h3{
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    color: #111517;
+    color: var(--text-color)
 }
 
+/* imtixonda logo va nav margin auto bilan qilinadi */
