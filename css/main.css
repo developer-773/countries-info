@@ -132,23 +132,36 @@ a{
     background-image: url("../images/path-dark.svg");
 }
 
+.theme-dark select{
+    border-right: 10px solid #2B3844;
+}
 
 .hero{
     padding-top: 48px;
+}
+
+.hero--active{
+    padding-top: 80px;
 }
 
 form{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 48px;
+    
+}
+
+form label{
+    width: 100%;
+    max-width: 480px;
 }
 
 
 
 input{
-    padding: 18px 59px;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
+    padding: 18px 15px 17px 58px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -160,15 +173,21 @@ input{
     color: var(--text-color);
     outline: none;
     background-color: var(--form-color);
-    border: 1px solid rgba(0,0,0,1);
+    border: none;
     border-radius: 5px;
+    /* animation: img .01s infinite; */
 }
+
+.theme-dark  input::placeholder{
+    color: #fff;
+}
+
 
 /* img va formlaga psevdo klassla ishlatilmaydi */
 
 input:focus{
-    box-shadow: 0px 2px  9px rgba(0, 0, 0, 0.0532439);
-    
+    /* box-shadow: 5px 25px  9px rgba(0, 0, 0, 0.0532439); */
+    border: 2px solid grey
 }
 
 select{
@@ -181,23 +200,21 @@ select{
     background-color: var(--form-color);
     padding: 18px 24px;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border: none;
     border-radius: 5px;
+    border-right: 10px solid #fff;
 }
 
 .country-list{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .country-item{
-    width: 264px;
-    margin-bottom: 67px;
-    
+    width: 264px; 
     background-color: var(--form-color);
     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
     border-radius: 5px;
@@ -224,4 +241,50 @@ h3{
     color: var(--text-color)
 }
 
+.belguim{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;  
+    color: #111517;
+    
+}
+
 /* imtixonda logo va nav margin auto bilan qilinadi */
+
+@media only screen and (max-width: 703px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    form label {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .site-logo svg{
+        width: 135px;
+    }
+    
+    input{
+        max-width: 343px;
+        background-position: calc(50% - 141px);
+    }
+    
+    .country-list{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 373px) {
+    input{
+        background-position: calc(8%);
+    }
+}
+
+
